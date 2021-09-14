@@ -21,6 +21,9 @@ public class MoveHandler {
         command.Execute();
         index++;
     }
+    public int length{
+        get => moveList.Count;
+    }
     public void UndoMove() {
         if (moveList.Count == 0) {
             return;

@@ -5,15 +5,14 @@ using System.Collections.Generic;
 public class GameState : MonoBehaviour
 {
     [SerializeField]
-    public MoveHandler moveHandler = new MoveHandler();
-
+    public DominoLogic dominoLogic = new DominoLogic();
     // Use this for initialization
     void Start()
     {
-        moveHandler.AddMove(new Move("welcome"));
-        moveHandler.AddMove(new Move("to"));
-        moveHandler.AddMove(new Move("the"));
-        moveHandler.AddMove(new Move("jungle"));
+        dominoLogic.AddMove(new Move("welcome"));
+        dominoLogic.AddMove(new Move("to"));
+        dominoLogic.AddMove(new Move("the"));
+        dominoLogic.AddMove(new Move("jungle"));
 
     }
 
@@ -21,10 +20,10 @@ public class GameState : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.UpArrow)) {
-            moveHandler.UndoMove();
+            dominoLogic.UndoMove();
         }
         if (Input.GetKeyDown(KeyCode.DownArrow)) {
-            moveHandler.RedoMove();
+            dominoLogic.RedoMove();
         }
     }
 }
