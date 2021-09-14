@@ -10,10 +10,10 @@ public class GameState : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        moveHandler.AddMove(new Move("welcome"));
-        moveHandler.AddMove(new Move("to"));
-        moveHandler.AddMove(new Move("the"));
-        moveHandler.AddMove(new Move("jungle"));
+        moveHandler.AddMove(new DominoLogic("welcome"));
+        moveHandler.AddMove(new DominoLogic("to"));
+        moveHandler.AddMove(new DominoLogic("the"));
+        moveHandler.AddMove(new DominoLogic("jungle"));
 
     }
 

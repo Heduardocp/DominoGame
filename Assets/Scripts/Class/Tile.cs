@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameLogic
+public class Tile: ITile
 {
-    // Start is called before the first frame update
- 
+    
+        
 }
-
