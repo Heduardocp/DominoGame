@@ -7,12 +7,10 @@ public interface ITile
  int top
     {
         get;
-        set;
     }
     int bot
     {
         get;
-        set;
     }
     
 }
