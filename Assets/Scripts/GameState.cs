@@ -26,4 +26,8 @@ public class GameState : MonoBehaviour
             dominoLogic.RedoMove();
         }
     }
+
+    public void EventClicked() {
+        Debug.Log("clicked event");
+    }
 }
