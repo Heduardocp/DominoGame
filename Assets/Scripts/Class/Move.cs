@@ -1,8 +1,8 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Move: ICommand
+public class Move : ICommand
 {
     [SerializeField]
     private Vector3 PositionToMoveTo;
@@ -13,15 +13,17 @@ public class Move: ICommand
         this.message = message;
     }
 
-    
-    public void Execute() {
+
+    public void Execute()
+    {
 
         Debug.Log(message);
 
     }
-    public void Undo() {
+    public void Undo()
+    {
         Debug.Log(message);
     }
 
-        
+
 }

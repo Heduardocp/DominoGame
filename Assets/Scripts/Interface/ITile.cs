@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IConnectPoint 
+public interface ITile
 {
-    Vector3 position {
+    int top
+    {
         get;
     }
-    Quaternion rotation {
+    int bot
+    {
         get;
     }
 

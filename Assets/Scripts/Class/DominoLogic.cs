@@ -4,40 +4,50 @@ using UnityEngine;
 
 public class DominoLogic
 {
-   
+
     private MoveHandler moveHandler = new MoveHandler();
     private int _topSide;
-    public int topSide{
+    public int topSide
+    {
         get => _topSide;
     }
 
     private int _botSide;
-    public int botSide{
-        get=> _botSide;
+    public int botSide
+    {
+        get => _botSide;
     }
-    public DominoLogic(){
+    public DominoLogic()
+    {
 
     }
-    public bool CheckIfValidMove(ITile tile){
-        if(moveHandler.length==0){
+    public bool CheckIfValidMove(ITile tile)
+    {
+        if (moveHandler.length == 0)
+        {
             return true;
         }
-        if(tile.top == topSide || tile.top == botSide){
+        if (tile.top == topSide || tile.top == botSide)
+        {
             return true;
         }
-         if(tile.bot == topSide || tile.bot == botSide){
+        if (tile.bot == topSide || tile.bot == botSide)
+        {
             return true;
         }
-            return false ;       
+        return false;
     }
-    public void AddMove(ICommand move){
+    public void AddMove(ICommand move)
+    {
         moveHandler.AddMove(move);
     }
-    public void UndoMove() {
+    public void UndoMove()
+    {
         moveHandler.UndoMove();
     }
-    public void RedoMove() {
+    public void RedoMove()
+    {
         moveHandler.RedoMove();
     }
-            
+
 }
