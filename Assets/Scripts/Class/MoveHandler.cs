@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class MoveHandler<T> where T:ICommand
 {
 
-    private List<T> moveList = new List<T>();
+    private List<ICommand> moveList = new List<ICommand>();
     private int index;
 
 

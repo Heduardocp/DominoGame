@@ -53,7 +53,7 @@ public class DominoLogic
 
     }
     
-    public void AddMove(ICommand move)
+    public void AddMove(TileMove move)
     {
         moveHandler.AddMove(move);
     }
