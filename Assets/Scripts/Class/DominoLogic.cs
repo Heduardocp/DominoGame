@@ -5,7 +5,7 @@ using UnityEngine;
 public class DominoLogic
 {
 
-    private MoveHandler moveHandler;
+    private MoveHandler<TileMove> moveHandler;
     private int _topSide;
     public int topSide
     {
@@ -19,7 +19,7 @@ public class DominoLogic
     }
     public DominoLogic()
     {
-        moveHandler = new MoveHandler();
+        moveHandler = new MoveHandler<TileMove>();
     }
     public bool CheckIfValidMove(ITile tile)
     {
@@ -47,7 +47,7 @@ public class DominoLogic
         }
         return false;
     }
-    public void PlayTop()
+    public void PlayTop(ITile tile,ICommand move)
     {
 
 

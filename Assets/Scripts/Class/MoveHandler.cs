@@ -2,15 +2,15 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class MoveHandler
+public class MoveHandler<T> where T:ICommand
 {
 
-    private List<ICommand> moveList = new List<ICommand>();
+    private List<T> moveList = new List<T>();
     private int index;
 
 
 
-    public void AddMove(ICommand command)
+    public void AddMove(T command)
     {
 
 
